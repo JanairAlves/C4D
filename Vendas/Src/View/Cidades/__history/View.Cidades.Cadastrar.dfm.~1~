@@ -1,0 +1,4 @@
+inherited ViewHerancasCadastrar1: TViewHerancasCadastrar1
+  Caption = 'ViewHerancasCadastrar1'
+  TextHeight = 15
+end

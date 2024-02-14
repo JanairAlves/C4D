@@ -1,0 +1,71 @@
+unit View.Principal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, Vcl.StdCtrls,
+  Vcl.Imaging.pngimage, Vcl.ExtCtrls, ShellAPI;
+
+type
+  TViewPrincipal = class(TForm)
+    MainMenu1: TMainMenu;
+    Cadastro1: TMenuItem;
+    Cadastro2: TMenuItem;
+    Movimentaes1: TMenuItem;
+    Financeiro1: TMenuItem;
+    Fiscal1: TMenuItem;
+    Cidades1: TMenuItem;
+    Pessoas1: TMenuItem;
+    N1: TMenuItem;
+    Subgruposdeprodutos1: TMenuItem;
+    Produtos1: TMenuItem;
+    Vendas1: TMenuItem;
+    Contasareceber1: TMenuItem;
+    Configuraes1: TMenuItem;
+    NFCe1: TMenuItem;
+    Panel1: TPanel;
+    Panel2: TPanel;
+    Image1: TImage;
+    Panel3: TPanel;
+    lbGitHub: TLabel;
+    Sair1: TMenuItem;
+    Label1: TLabel;
+    procedure lbGitHubClick(Sender: TObject);
+    procedure lbGitHubMouseEnter(Sender: TObject);
+    procedure lbGitHubMouseLeave(Sender: TObject);
+    procedure Sair1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  ViewPrincipal: TViewPrincipal;
+
+implementation
+
+{$R *.dfm}
+
+procedure TViewPrincipal.lbGitHubClick(Sender: TObject);
+begin
+  ShellExecute(0, nil, PChar(TLabel(Sender).Caption), '', '', SW_ShowNormal);
+end;
+
+procedure TViewPrincipal.lbGitHubMouseEnter(Sender: TObject);
+begin
+  TLabel(Sender).Font.Color := clRed;
+end;
+
+procedure TViewPrincipal.lbGitHubMouseLeave(Sender: TObject);
+begin
+  TLabel(Sender).Font.Color := clWindowText;
+end;
+
+procedure TViewPrincipal.Sair1Click(Sender: TObject);
+begin
+  Application.Terminate;
+end;
+
+end.

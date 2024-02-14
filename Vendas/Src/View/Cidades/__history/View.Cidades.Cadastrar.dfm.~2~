@@ -1,0 +1,4 @@
+inherited ViewCidadesCadastrar: TViewCidadesCadastrar
+  Caption = 'Cidades cadastrar/alternar'
+  TextHeight = 15
+end

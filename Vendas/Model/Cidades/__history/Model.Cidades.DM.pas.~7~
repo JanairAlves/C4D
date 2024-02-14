@@ -1,0 +1,46 @@
+unit Model.Cidades.DM;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, FireDAC.Stan.Intf, FireDAC.Stan.Option,
+  FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf,
+  FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt, Data.DB,
+  FireDAC.Comp.DataSet, FireDAC.Comp.Client, Model.Conexao.DM;
+
+type
+  TModelCidadesDM = class(TDataModule)
+    QCidadeCadastro: TFDQuery;
+    QCidadeBuscar: TFDQuery;
+    QCidadeCadastroID: TIntegerField;
+    QCidadeCadastroNOME: TStringField;
+    QCidadeCadastroUF: TStringField;
+    QCidadeCadastroCODIGO_IBGE: TIntegerField;
+    QCidadeBuscarID: TIntegerField;
+    QCidadeBuscarNOME: TStringField;
+    QCidadeBuscarUF: TStringField;
+    QCidadeBuscarCODIGO_IBGE: TIntegerField;
+  private
+    { Private declarations }
+  public
+    procedure CidadesBuscar(const ACondicao: string);
+  end;
+
+var
+  ModelCidadesDM: TModelCidadesDM;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+{$R *.dfm}
+
+{ TModelCidadesDM }
+
+procedure TModelCidadesDM.CidadesBuscar(const ACondicao: string);
+begin
+  QCidadeBuscar.Close;
+  QCidadeBuscar.
+end;
+
+end.

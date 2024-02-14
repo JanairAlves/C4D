@@ -1,0 +1,64 @@
+object ModelCidadesDM: TModelCidadesDM
+  Height = 189
+  Width = 622
+  object QCidadeCadastro: TFDQuery
+    Connection = ModelConexaoDM.FDConnection1
+    SQL.Strings = (
+      'SELECT * FROM cidades')
+    Left = 48
+    Top = 56
+    object QCidadeCadastroID: TIntegerField
+      DisplayLabel = 'C'#243'digo'
+      FieldName = 'ID'
+      Origin = 'ID'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object QCidadeCadastroNOME: TStringField
+      DisplayLabel = 'Nome'
+      FieldName = 'NOME'
+      Origin = 'NOME'
+      Size = 60
+    end
+    object QCidadeCadastroUF: TStringField
+      FieldName = 'UF'
+      Origin = 'UF'
+      Size = 2
+    end
+    object QCidadeCadastroCODIGO_IBGE: TIntegerField
+      DisplayLabel = 'C'#243'digo IBGE'
+      FieldName = 'CODIGO_IBGE'
+      Origin = 'CODIGO_IBGE'
+    end
+  end
+  object QCidadeBuscar: TFDQuery
+    Connection = ModelConexaoDM.FDConnection1
+    SQL.Strings = (
+      'SELECT * FROM cidades')
+    Left = 168
+    Top = 56
+    object QCidadeBuscarID: TIntegerField
+      DisplayLabel = 'C'#243'digo'
+      FieldName = 'ID'
+      Origin = 'ID'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object QCidadeBuscarNOME: TStringField
+      DisplayLabel = 'Nome'
+      FieldName = 'NOME'
+      Origin = 'NOME'
+      Size = 60
+    end
+    object QCidadeBuscarUF: TStringField
+      FieldName = 'UF'
+      Origin = 'UF'
+      Size = 2
+    end
+    object QCidadeBuscarCODIGO_IBGE: TIntegerField
+      DisplayLabel = 'C'#243'digo IBGE'
+      FieldName = 'CODIGO_IBGE'
+      Origin = 'CODIGO_IBGE'
+    end
+  end
+end

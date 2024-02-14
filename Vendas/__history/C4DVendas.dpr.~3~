@@ -1,0 +1,15 @@
+program C4DVendas;
+
+uses
+  Vcl.Forms,
+  View.Principal in 'Src\View\View.Principal.pas' {ViewPrincipal};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.Title := 'Delphi: Sistema de vendas do zero ao multicamadas';
+  Application.CreateForm(TViewPrincipal, ViewPrincipal);
+  Application.Run;
+end.

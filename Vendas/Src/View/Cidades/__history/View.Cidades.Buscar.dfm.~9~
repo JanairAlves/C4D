@@ -1,0 +1,47 @@
+inherited ViewCidadesBuscar: TViewCidadesBuscar
+  Caption = 'Cidades Buscar'
+  OnDestroy = FormDestroy
+  TextHeight = 15
+  inherited pnGrid: TPanel
+    inherited DBGrid1: TDBGrid
+      Columns = <
+        item
+          Expanded = False
+          FieldName = 'ID'
+          Width = 75
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'NOME'
+          Width = 454
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'UF'
+          Width = 44
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'CODIGO_IBGE'
+          Width = 195
+          Visible = True
+        end>
+    end
+  end
+  inherited pnRodape: TPanel
+    inherited rdGroupFiltros: TRadioGroup
+      Columns = 3
+      ItemIndex = 1
+      Items.Strings = (
+        'C'#243'digo (F1)'
+        'Nome (F2)'
+        'UF (F3)')
+    end
+  end
+  inherited DataSource1: TDataSource
+    DataSet = ModelCidadesDM.QCidadesBuscar
+  end
+end

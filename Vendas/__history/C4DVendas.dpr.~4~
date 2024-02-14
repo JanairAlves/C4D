@@ -1,0 +1,17 @@
+program C4DVendas;
+
+uses
+  Vcl.Forms,
+  View.Principal in 'Src\View\View.Principal.pas' {ViewPrincipal},
+  Model.Conexao.DM in 'Model\Conexao\Model.Conexao.DM.pas' {DataModule1: TDataModule};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.Title := 'Delphi: Sistema de vendas do zero ao multicamadas';
+  Application.CreateForm(TViewPrincipal, ViewPrincipal);
+  Application.CreateForm(TDataModule1, DataModule1);
+  Application.Run;
+end.

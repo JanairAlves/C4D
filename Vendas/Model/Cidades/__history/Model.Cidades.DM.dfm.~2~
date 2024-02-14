@@ -1,0 +1,20 @@
+object ModelCidadesDM: TModelCidadesDM
+  Height = 480
+  Width = 640
+  object FDQuery1: TFDQuery
+    Left = 48
+    Top = 56
+  end
+  object FDQuery2: TFDQuery
+    Left = 344
+    Top = 56
+  end
+  object DataSource1: TDataSource
+    Left = 184
+    Top = 56
+  end
+  object DataSource2: TDataSource
+    Left = 512
+    Top = 56
+  end
+end

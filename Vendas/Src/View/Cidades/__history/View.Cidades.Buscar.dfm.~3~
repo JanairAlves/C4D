@@ -1,0 +1,33 @@
+inherited ViewCidadesBuscar: TViewCidadesBuscar
+  Caption = 'ViewCidadesBuscar'
+  TextHeight = 15
+  inherited pnTopo: TPanel
+    inherited edtBuscar: TEdit
+      Width = 748
+      ExplicitWidth = 744
+    end
+  end
+  inherited pnGrid: TPanel
+    inherited pnTotal: TPanel
+      inherited lbTotal: TLabel
+        ExplicitLeft = 633
+      end
+    end
+  end
+  inherited pnRodape: TPanel
+    inherited RadioGroup1: TRadioGroup
+      Width = 400
+      Columns = 3
+      ItemIndex = 1
+      Items.Strings = (
+        'C'#243'digo'
+        'Nome'
+        'UF')
+      ExplicitWidth = 400
+    end
+    inherited btnFechar: TBitBtn
+      ExplicitLeft = 689
+      ExplicitTop = 8
+    end
+  end
+end

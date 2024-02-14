@@ -1,0 +1,36 @@
+object ViewHerancasCadastrar: TViewHerancasCadastrar
+  Left = 0
+  Top = 0
+  Caption = 'ViewHerancasCadastrar'
+  ClientHeight = 362
+  ClientWidth = 788
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  KeyPreview = True
+  Position = poScreenCenter
+  TextHeight = 15
+  object pnDados: TPanel
+    Left = 0
+    Top = 0
+    Width = 788
+    Height = 321
+    Align = alClient
+    TabOrder = 0
+    ExplicitWidth = 784
+    ExplicitHeight = 320
+  end
+  object pnRodape: TPanel
+    Left = 0
+    Top = 321
+    Width = 788
+    Height = 41
+    Align = alBottom
+    TabOrder = 1
+    ExplicitTop = 320
+    ExplicitWidth = 784
+  end
+end

@@ -1,0 +1,139 @@
+inherited ViewCidadesCadastrar: TViewCidadesCadastrar
+  Caption = 'Cidades cadastrar/alternar'
+  ClientHeight = 305
+  ClientWidth = 531
+  ExplicitWidth = 543
+  ExplicitHeight = 343
+  TextHeight = 15
+  inherited pnDados: TPanel
+    Width = 531
+    Height = 264
+    object Label1: TLabel
+      Left = 32
+      Top = 48
+      Width = 38
+      Height = 15
+      Caption = 'C'#243'digo'
+      FocusControl = edtCodigo
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label2: TLabel
+      Left = 32
+      Top = 96
+      Width = 34
+      Height = 15
+      Caption = 'Nome'
+      FocusControl = edtNome
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label3: TLabel
+      Left = 32
+      Top = 144
+      Width = 15
+      Height = 15
+      Caption = 'UF'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label4: TLabel
+      Left = 32
+      Top = 192
+      Width = 66
+      Height = 15
+      Caption = 'C'#243'digo IBGE'
+      FocusControl = edtCodigoIBGE
+    end
+    object edtCodigo: TDBEdit
+      Left = 32
+      Top = 64
+      Width = 154
+      Height = 23
+      Color = clBtnFace
+      DataField = 'ID'
+      DataSource = DataSource1
+      ReadOnly = True
+      TabOrder = 0
+    end
+    object edtNome: TDBEdit
+      Left = 32
+      Top = 112
+      Width = 465
+      Height = 23
+      DataField = 'NOME'
+      DataSource = DataSource1
+      TabOrder = 1
+    end
+    object edtCodigoIBGE: TDBEdit
+      Left = 32
+      Top = 208
+      Width = 154
+      Height = 23
+      DataField = 'CODIGO_IBGE'
+      DataSource = DataSource1
+      TabOrder = 3
+    end
+    object cBoxUF: TDBComboBox
+      Left = 32
+      Top = 159
+      Width = 145
+      Height = 23
+      Style = csDropDownList
+      DataField = 'UF'
+      DataSource = DataSource1
+      Items.Strings = (
+        'BA'
+        'CE'
+        'DF'
+        'ES'
+        'GO'
+        'MA'
+        'MG'
+        'MS'
+        'MT'
+        'PA'
+        'PB'
+        'PE'
+        'PI'
+        'PR'
+        'RJ'
+        'RN'
+        'RO'
+        'RR'
+        'SC'
+        'SE'
+        'SP'
+        'TO'
+        'EX')
+      TabOrder = 2
+    end
+  end
+  inherited pnRodape: TPanel
+    Top = 264
+    Width = 531
+    inherited btnGravar: TBitBtn
+      Left = 267
+    end
+    inherited btnCancelar: TBitBtn
+      Left = 400
+    end
+  end
+  inherited DataSource1: TDataSource
+    DataSet = ModelCidadesDM.QCidadeCadastro
+    Left = 392
+    Top = 24
+  end
+end

@@ -1,0 +1,28 @@
+object ModelCidadesDM: TModelCidadesDM
+  Height = 189
+  Width = 622
+  object QCidadeCadastro: TFDQuery
+    Connection = ModelConexaoDM.FDConnection1
+    SQL.Strings = (
+      'SELECT * FROM cidades')
+    Left = 48
+    Top = 56
+  end
+  object QCidadeBuscar: TFDQuery
+    Connection = ModelConexaoDM.FDConnection1
+    SQL.Strings = (
+      'SELECT * FROM cidades')
+    Left = 344
+    Top = 56
+  end
+  object DS_QCidadeCadastro: TDataSource
+    DataSet = QCidadeCadastro
+    Left = 184
+    Top = 56
+  end
+  object DS_QCidadeBuscar: TDataSource
+    DataSet = QCidadeBuscar
+    Left = 512
+    Top = 56
+  end
+end
